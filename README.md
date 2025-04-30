@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Department Manager Frontend
+
+A modern, responsive web application for managing department hierarchies. Built with Next.js, Apollo Client, and Tailwind CSS.
+
+## Features
+
+- **User Authentication**
+  - Secure JWT-based authentication
+  - Beautiful login form with error handling
+  - Persistent session management
+
+- **Department Management**
+  - Create, read, update, and delete departments
+  - Manage sub-departments with an intuitive interface
+  - Beautiful modal forms for department operations
+  - Responsive table view with hierarchy display
+  - Real-time updates after modifications
+
+- **Advanced UI Features**
+  - Pagination with customizable items per page
+  - Modern design with Tailwind CSS
+  - Responsive layout for all screen sizes
+  - Loading states and error handling
+  - Beautiful transitions and hover effects
+  - Accessible components with ARIA labels
+
+- **Data Management**
+  - GraphQL integration with Apollo Client
+  - Efficient caching and state management
+  - Optimistic updates for better UX
+  - Error boundary implementation
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+3. Create a `.env` file in the root directory:
+   ```env
+   NEXT_PUBLIC_API_URL=http://localhost:4000/graphql
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## API Integration
 
-## Learn More
+The frontend connects to a NestJS backend that provides the following GraphQL endpoints:
 
-To learn more about Next.js, take a look at the following resources:
+- **Authentication**: JWT-based login
+- **Departments**: CRUD operations with pagination
+- **Sub-departments**: Nested department management
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework**: Next.js 15.3.1
+- **State Management**: Apollo Client
+- **Styling**: Tailwind CSS
+- **Authentication**: JWT
+- **Data Fetching**: GraphQL
 
-## Deploy on Vercel
+## Best Practices
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Responsive design principles
+- Component-based architecture
+- Type-safe development with TypeScript
+- Proper error handling
+- Accessible UI components
+- Clean code structure
+- Modern React patterns
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
